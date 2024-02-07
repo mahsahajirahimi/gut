@@ -1,10 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g
+CFLAGS = -Wall -Wextra -g -w
 
 SRC_DIR = src
 BUILD_DIR = build
 
-# List your source files (excluding headers) here
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 DEPS = $(wildcard $(SRC_DIR)/*.h)
